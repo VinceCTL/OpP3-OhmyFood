@@ -1,12 +1,86 @@
 <!DOCTYPE html>
 <html lang="fr">
   <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/7d17636476.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./sass/main.css">
 
+    <link rel="icon" href="./assets/logo/ohmyfood.png" />
+    <title>Accueil - ohmyfood!</title>
+    <meta name="title" content="Accueil - ohmyfood!">
+    <meta name="description" content="Ohmyfood! est une entreprise de commande de repas en ligne. Notre concept permet aux utilisateurs de composer leur propre menu et réduire leur temps d’attente dans les restaurants.">
   </head>
-  <body>
-    <h1>Hello World</h1>
-  </body>
-  <footer>
 
-  </footer>
+  <body>
+
+    <header class="header">
+      <h1 class="header__logo">ohmyfood</h1>
+    </header>
+    <main>
+      <section class="localisation">
+        <i class="fas fa-map-marker-alt localisation__icon"></i>
+        <span class="localisation__text">Paris, Belleville</span>
+      </section>
+
+      <section>
+
+      </section>
+      <section class="explore">
+        <h2 class="explore__title">Réservez le menu qui<br>vous convient</h2>
+        <p class="explore__subtitle">
+          Découvrez des restaurants d'exception, séléctionnés par nos soins
+        </p>
+        <a class="explore__btn">
+          Explorer nos restaurants
+        </a>
+      </section>
+
+      <section class="tutorial">
+        <div class="container">
+          <h2 class="tutorial__title">Fonctionnement</h2>
+          <ol class="tutorial__steps">
+            <li class="tutorial__step">
+              <i class="tutorial__icon fas fa-mobile-alt"></i>
+              <span >Choisissez un restaurant</span>
+            </li>
+            <li class="tutorial__step">
+              <i class="tutorial__icon fas fa-list-ul"></i>
+              <span >Composez votre menu</span>
+            </li>
+            <li class="tutorial__step">
+              <i class="tutorial__icon fas fa-store"></i>
+              <span >Dégustez au restaurant</span>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="restaurants" id="restaurants" >
+        
+
+      </section>
+
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <span class="footer__logo">ohmyfood</span>
+        <ul class="footer__list">
+          <li class="footer__listElt">
+            <a class="footer__link" href="#"><i class="footer__icon fas fa-utensils"></i>Proposer un restaurant</a>
+          </li>
+          <li class="footer__listElt">
+            <a class="footer__link" href="#"><i class="footer__icon fas fa-hands-helping"></i>Devenir partenaire</a>
+          </li>
+          <li class="footer__listElt">
+            <a class="footer__link" href="#">Mentions légales</a>
+          </li>
+          <li class="footer__listElt">
+            <a class="footer__link" href="mailto:contact@ohmyfood.com">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </body>
 </html>
