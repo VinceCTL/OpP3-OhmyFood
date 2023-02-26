@@ -60,10 +60,6 @@ body, html {
 .footer__link:hover {
   text-decoration: underline;
 }
-.footer__icon {
-  width: 1.2rem;
-  margin-right: 0.5rem;
-}
 
 body, html {
   margin: 0;
@@ -126,10 +122,6 @@ body, html {
 .footer__link:hover {
   text-decoration: underline;
 }
-.footer__icon {
-  width: 1.2rem;
-  margin-right: 0.5rem;
-}
 
 .localisation {
   display: flex;
@@ -170,6 +162,7 @@ body, html {
   cursor: pointer;
   transition-duration: 0.25s;
   box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+  text-decoration: none;
 }
 .explore__btn:hover {
   background-color: white;
@@ -192,7 +185,7 @@ body, html {
   list-style: none;
   counter-reset: compteListe;
 }
-@media (min-width: 64rem) {
+@media (min-width: 992px) {
   .tutorial__steps {
     display: flex;
   }
@@ -206,7 +199,7 @@ body, html {
   display: flex;
   position: relative;
 }
-@media (min-width: 64rem) {
+@media (min-width: 992px) {
   .tutorial__step {
     flex: 1;
     margin: 0;
@@ -239,4 +232,79 @@ body, html {
 .tutorial__icon {
   margin-right: 1rem;
   color: #7e7e7e;
+}
+
+.restaurants {
+  background-color: #f6f6f6;
+  padding: 2rem 1rem;
+}
+.restaurants__title {
+  margin-top: 0;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
+  row-gap: 2rem;
+}
+@media (min-width: 992px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.card {
+  background-color: white;
+  border-radius: 1rem;
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  box-shadow: 0rem;
+}
+.card__img {
+  height: 12rem;
+  width: 100%;
+  border: transparent solid 0px;
+  border-radius: 1rem 1rem 0 0;
+  box-shadow: none;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.card__badge {
+  background-color: #99E2D0;
+  color: #1b6150;
+  padding: 0.5rem;
+  border-radius: 0.125rem;
+  position: absolute;
+  top: 1rem;
+  right: 0.75rem;
+}
+.card__footer {
+  padding: 1rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.card__content {
+  flex: 1;
+}
+.card__title {
+  margin: 0;
+  margin-bottom: 0.25rem;
+}
+.card__subtitle {
+  margin: 0;
+}
+.card__like {
+  height: 2rem;
+  width: 2rem;
+  background-color: transparent;
+  border: transparent 0px solid;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }/*# sourceMappingURL=main.css.map */

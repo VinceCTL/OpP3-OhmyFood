@@ -71,11 +71,6 @@ body, html {
       text-decoration: underline;
     }
   }
-
-  &__icon {
-    width: 1.2rem;
-    margin-right: 0.5rem;
-  }
 }
 @mixin button($type) {
   border: 0;
