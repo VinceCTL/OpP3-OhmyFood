@@ -173,7 +173,7 @@
     margin: 0;
   }
 
-  &__like {
+  &__btn {
     height: 2rem;
     width: 2rem;
     background-color: transparent;
@@ -182,5 +182,9 @@
     display:flex;
     align-items:center;
     justify-content:center;
+  }
+
+  &__like {
+    background-color: white!important;
   }
 }
