@@ -1,4 +1,5 @@
 @import "variables";
+@import "base";
 
 .header {
   &__arrow {
@@ -129,11 +130,13 @@
 
 @keyframes itemAppear {
   0% {
-    transform: scale(0)
+    opacity: 0;
+    transform: translateY(50px)
   }
 
   100% {
-    transform: scale(1);
+    opacity: 1;
+    transform: translateY(0px);
   }
 }
 
@@ -146,10 +149,9 @@
   box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
   overflow: hidden;
   cursor: pointer;
-  animation: itemAppear .6s;
-  animation-timing-function: cubic-bezier(.5, 1.58, .34, .82);
-  animation-fill-mode: both;
-  transform: scale(0);
+  animation: itemAppear 0.7s ease-in-out;
+  opacity: 0;
+  transition: opacity 0.7s ease-in-out, transform 0.7s ease-in-out;
   max-width: 100%;
 
   &__header {
@@ -181,10 +183,58 @@
     padding-left: 0.5rem;
   }
 
-  @for $i from 0 to 9 {
-    .delay-#{$i} {
-      animation-delay: divide($i, 10)s;
-    }
+  &__confirmation {
+    background-color: $color-tertiary;
+    margin: -1rem -5rem -1rem 1rem;
+    width: 4rem;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transition-duration: 0.5s;
   }
 
+  &:hover &__confirmation {
+    margin-right: -1rem;
+  }
+
+  &__wrapIcon {
+    height: 1.6rem;
+    width: 1.6rem;
+    background-color: white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius: 100px;
+    transform: rotate(180deg);
+    transition-duration: 0.5s;
+
+  }
+
+  &:hover &__wrapIcon {
+    transform: rotate(0);
+  }
+
+  &__icon {
+    color: $color-tertiary;
+  }
+
+}
+
+@for $i from 0 to 9 {
+  .delay-#{$i} {
+    animation-delay: ($i - 1) * 0.1s;
+    opacity: 1;
+  }
+}
+
+.wrapBtn {
+  display: flex;
+  text-decoration: none;
+  justify-content: center;
+  padding: 3rem 0;
+}
+
+.commandBtn {
+  @include button(primary);
+  cursor: pointer;
 }
