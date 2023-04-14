@@ -5,7 +5,7 @@ body, html {
 }
 
 .container {
-  max-width: 1280px;
+  max-width: 1440px;
   margin: auto;
   position: relative;
 }
@@ -235,7 +235,7 @@ body, html {
 .card__subtitle {
   margin: 0;
 }
-.card__like {
+.card__btn {
   height: 2rem;
   width: 2rem;
   background-color: transparent;
@@ -244,4 +244,7 @@ body, html {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.card__like {
+  background-color: white !important;
 }/*# sourceMappingURL=homepage.css.map */
