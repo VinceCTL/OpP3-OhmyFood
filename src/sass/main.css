@@ -653,14 +653,27 @@ body, html {
   width: 100vw;
   height: 100vh;
   z-index: 1000;
+  animation: hideLoader 3s linear forwards;
 }
 
+@keyframes hideLoader {
+  0% {
+    opacity: 1;
+    pointer-events: none;
+    position: fixed;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+    pointer-events: none;
+  }
+}
 .loader {
   width: 3rem;
   height: 3rem;
   position: relative;
-  border: 0.5rem solid #ccc;
-  border-top-color: #666;
+  border: 0.5rem solid #9356DC;
+  border-top-color: #FF79DA;
   border-radius: 50%;
   animation: spin 3s linear infinite;
 }
@@ -678,12 +691,12 @@ body, html {
 }
 
 .loader:before {
-  border-top-color: #3498db;
+  border-top-color: #99E2D0;
   animation: spin 1.5s linear infinite;
 }
 
 .loader:after {
-  border-top-color: #9b59b6;
+  border-top-color: #9356DC;
   animation: spin 0.75s linear infinite;
 }
 
@@ -693,30 +706,6 @@ body, html {
   }
   100% {
     transform: rotate(360deg);
-  }
-}
-body.loading .loader-container {
-  display: flex;
-}
-
-body.loading * {
-  pointer-events: none;
-}
-
-body.loading .loader-container.loaded {
-  display: none;
-}
-
-body.loading .loader-container.loaded + * {
-  pointer-events: auto;
-}
-
-@keyframes hideLoader {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
     display: none;
   }
 }/*# sourceMappingURL=main.css.map */
