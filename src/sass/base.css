@@ -21,6 +21,10 @@ body, html {
   margin: 0;
   text-align: center;
 }
+.header__link {
+  text-decoration: none;
+  color: black;
+}
 
 .footer {
   background-color: #353535;
